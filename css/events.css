@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #e8f4f8;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+nav {
+  height: 55px;
+  min-width: 730px;
+}
+
+@media screen and (width > 1200px) {
+  nav {
+    min-width: 1015px !important;
+  }
+}
+
+@media screen and (width < 800px) {
+  nav {
+    min-width: 65px !important;
+  }
+}
+
+/* Search Bar Styles */
+.search-container {
+  max-width: 1200px;
+}
+
+.search-bar {
+  justify-self: center;
+  width: 100%;
+  padding: 18px 30px;
+  font-size: 18px;
+  border: 2px solid #333;
+  border-radius: 50px;
+  background-color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #5ba3b8;
+  box-shadow: 0 0 0 3px rgba(91, 163, 184, 0.1);
+}
+
+.search-bar::placeholder {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Events Container */
+.events-container {
+  max-width: 1200px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Event Card Styles */
+.event-card {
+  background: linear-gradient(135deg, #7ec8e3 0%, #5ba3b8 100%);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  max-width: 1160px;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.event-card.hidden {
+  display: none;
+}
+
+/* Event Image Styles */
+.event-image-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #ddd;
+}
+
+/* For when using actual img elements */
+.event-image-container img.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0; /* Border radius handled by container */
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  font-family: "Brush Script MT", cursive;
+  z-index: 1;
+  pointer-events: none; /* Ensures overlay doesn't block image interactions */
+}
+
+/* Event Content Styles */
+.event-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-title {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* Event Details Container */
+.event-details {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Info Bubble Styles */
+.info-bubble {
+  background-color: rgba(91, 163, 184, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-item {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.info-item strong {
+  font-weight: 600;
+}
+
+.info-item a {
+  color: white;
+  text-decoration: underline;
+}
+
+.info-item a:hover {
+  text-decoration: none;
+}
+
+/* Description Bubble Styles */
+.description-bubble {
+  background-color: rgba(91, 163, 184, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  flex: 1;
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+.description-bubble strong {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.page-title {
+  margin-top: 300px;
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: "Birkshire Swash";
+  color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 993px) {
+  body {
+    padding: 0px;
+  }
+
+  .search-container {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .events-container {
+    margin: auto;
+  }
+
+  .event-card {
+    margin: auto;
+    flex-direction: row; /* Ensure horizontal layout on larger screens */
+  }
+
+  .event-details {
+    flex-direction: row; /* Ensure horizontal layout for details */
+  }
+
+  .info-bubble {
+    width: 35%; /* Set appropriate width for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    padding: 0px;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .event-details {
+    flex-direction: column;
+  }
+
+  .info-bubble {
+    width: 100%;
+  }
+  .search-container {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 0px;
+  }
+
+  .search-container {
+    margin: 30px;
+  }
+
+  .search-bar {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .event-card {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .event-title {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+
+  .info-bubble,
+  .description-bubble {
+    padding: 20px;
+  }
+
+  .info-item {
+    font-size: 18px;
+  }
+
+  .description-bubble {
+    font-size: 14px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
