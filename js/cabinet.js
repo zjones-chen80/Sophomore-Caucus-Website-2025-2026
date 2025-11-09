@@ -3,21 +3,21 @@ var images = [
   "Elly.jpeg",
   "Tenzin.jpeg",
   "Mark.png",
-  "pfp.jpeg",
+  "Roman.jpeg",
   "Brianna.jpeg",
   "Isabel.jpg",
-  "pfp.jpg",
+  "Olivia.png",
   "Trevor.jpeg",
   "Tiffany.jpeg",
   "Anthony.jpeg",
   "Yubin.jpeg",
   "Rahul.jpg",
   "Junseo.jpeg",
-  "pfp.jpeg",
+  "Alvin.jpg",
   "Angel.jpeg",
   "Amber.png",
   "Chloe.jpeg",
-  "pfp.jpg",
+  "Prabal.jpg",
   "Zinnia.jpeg",
 ];
 
@@ -26,3 +26,4 @@ for (var i = 0; i < images.length; i++) {
   photos[i].style.backgroundSize = "cover";
   photos[i].style.backgroundPosition = "center";
 }
+
