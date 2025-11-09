@@ -1,0 +1,80 @@
+@media screen and (width > 800px) {
+  .page-title {
+    scale: 1.5;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.cabinet-container {
+  padding-top: 100px !important;
+  padding-bottom: 50px !important;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: Lato, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px 20px;
+  place-items: center;
+}
+
+.card {
+  width: 280px;
+  height: 360px;
+  background-color: #e0e6ee;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: ease 0.7s;
+  background-size: cover;
+  background-position: center;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.page-title {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 4.5rem;
+  position: absolute;
+  font-family: "League Spartan";
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+}
+
+.info {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 8px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+  background-color: #1a0050;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.role {
+  color: #1a0050;
+  font-size: 16px;
+}

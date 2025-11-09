@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+.footer {
+  background: linear-gradient(to top, #e3e6ff, white);
+  color: #174753;
+  padding: 40px 0;
+  font-family: "Monserrat", sans-serif;
+  width: 100%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns on large screens */
+  grid-template-areas:
+    "left right"
+    "copyright copyright";
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  align-items: start;
+  text-align: center;
+  position: relative;
+}
+
+.footer-left {
+  grid-area: left;
+}
+
+.footer-right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.footer-title {
+  color: #7dcade;
+  font-size: 60px;
+  margin: 0;
+}
+
+.presidents {
+  color: #4a99a7;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.copyright {
+  grid-area: copyright;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.footer-role {
+  margin-top: 50px;
+  font-weight: 700;
+  color: #174753;
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+.role-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.role-column li {
+  color: #5ca3ad;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.darker {
+  color: #529fad;
+}
+
+.socials-img {
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.socials-img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "copyright";
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+
+  .copyright {
+    margin-top: 20px;
+  }
+
+  .footer-role {
+    margin-top: 0;
+    font-size: 30px;
+  }
+}
